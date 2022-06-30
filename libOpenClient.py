@@ -66,12 +66,12 @@ class libOpenClient:
 		msg = self.recebe_msg()
 		msg = msg.split(" ")
 		saida = cordJunta()
-		saida.j1 = float(int(msg[0]))/1000000
-		saida.j2 = float(int(msg[1]))/1000000
-		saida.j3 = float(int(msg[2]))/1000000
-		saida.j4 = float(int(msg[3]))/1000000
-		saida.j5 = float(int(msg[4]))/1000000
-		saida.j6 = float(int(msg[5]))/1000000
+		saida.j1 = float(int(msg[0]))/100000
+		saida.j2 = float(int(msg[1]))/100000
+		saida.j3 = float(int(msg[2]))/100000
+		saida.j4 = float(int(msg[3]))/100000
+		saida.j5 = float(int(msg[4]))/100000
+		saida.j6 = float(int(msg[5]))/100000
 		return saida
 
 	def escreve_le_cart(self,x,y,z,a,e,r):
@@ -99,22 +99,4 @@ class libOpenClient:
 		saida.j5 = float(int(msg[4]))/100000
 		saida.j6 = float(int(msg[5]))/100000
 		return saida
-
-
-
-##### EXEMPLO cartesiano
-
-#import libOpenClient as loc
-#oc = loc.libOpenClient()
-#oc.escreve_le_cart( 797.07 , 0.0 , 1075.0 , 0.0 , 0.0 , 0.0 )
-#coordenadas_Cartesianas = oc.le_cart()
-#print("X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r) )
-
-
-##### EXEMPLO junta
-
-#oc = libOpenClient('localhost')
-#oc.escreve_le_junta(0,0,-90,0,90,0)
-#coordenadas_Juntas = oc.le_junta()
-#print("J1: " + str(coordenadas_Juntas.j1) + "J2: " + str(coordenadas_Juntas.j2) + "J3: " + str(coordenadas_Juntas.j3) + "J4: " + str(coordenadas_Juntas.j4) + "\tJ5: " +  str(coordenadas_Juntas.j5) + "J6: " + str(coordenadas_Juntas.j6))
 

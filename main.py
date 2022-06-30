@@ -16,9 +16,11 @@ def movelinear(posfin, velocity):
         coordenadas_Cartesianas = oc.le_cart()
         print("X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r) )
 
+        pos.x = pos.x + passo
+        pos.y = pos.y + passo
         pos.z = pos.z + passo
 
-        oc.escreve_le_cart( 797.0 , 10.0 , (pos.z) , 0.0 , 100.0 , 0.0 )
+        oc.escreve_le_cart( pos.x , pos.y , pos.z , pos.a , pos.e , pos.r )
 
         t.sleep(0.01)
 
@@ -32,7 +34,7 @@ target = loc.cordCart()
 
 target.x = 797.0
 target.y = 10.0
-target.z = 1300 #
+target.z = 1300
 target.a = 0.0
 target.e = 100.0
 target.r = 0.0
