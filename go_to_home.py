@@ -24,7 +24,7 @@ def movelinear(posfin, steps):
     while(True):
 
         #Delay para compensar atrasos em cada passo:
-        t.sleep(0.01)
+        t.sleep(0.1)
 
         #Le e imprime a posicao atual do robo, a cada iteracao:
         coordenadas_Cartesianas = oc.le_cart()
@@ -45,7 +45,7 @@ def movelinear(posfin, steps):
             reach_z = True    
 
         #Escreve o novo vetor posicao com os devidos incrementos em cada eixo:
-        oc.escreve_le_cart( pos.x , pos.y , pos.z , pos.a , pos.e , pos.r )
+        oc.escreve_le_cart( pos.x , pos.y , pos.z , 0.0 , 90.0 , 0.0 )
 
         #Suaviza o movimento, reduzindo a velocidade em 10 vezes, nos ultimos 10mm:
         if(((abs(posfin.x-pos.x) < 10) or (abs(posfin.y-pos.y) < 10) or (abs(posfin.z-pos.z) < 10)) and smooth):
@@ -73,4 +73,4 @@ homepos.a = 0.178
 homepos.e = 88.779
 homepos.r = 3.683
 
-movelinear(homepos, 200)
+movelinear(homepos, 10)

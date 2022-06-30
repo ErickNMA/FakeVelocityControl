@@ -24,7 +24,7 @@ def movelinear(posfin, steps):
     while(True):
 
         #Delay para compensar atrasos em cada passo:
-        t.sleep(0.01)
+        t.sleep(0.1)
 
         #Le e imprime a posicao atual do robo, a cada iteracao:
         coordenadas_Cartesianas = oc.le_cart()
@@ -45,7 +45,7 @@ def movelinear(posfin, steps):
             reach_z = True    
 
         #Escreve o novo vetor posicao com os devidos incrementos em cada eixo:
-        oc.escreve_le_cart( pos.x , pos.y , pos.z , pos.a , pos.e , pos.r )
+        oc.escreve_le_cart( pos.x , pos.y , pos.z , 0.0 , 90.0 , 0.0 )
 
         #Suaviza o movimento, reduzindo a velocidade em 10 vezes, nos ultimos 10mm:
         if(((abs(posfin.x-pos.x) < 10) or (abs(posfin.y-pos.y) < 10) or (abs(posfin.z-pos.z) < 10)) and smooth):
@@ -143,40 +143,40 @@ p8.z = z2n
 #Movimentacao:
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-movelinear(homepos, 200)
+movelinear(homepos, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p1, 200)
+t.sleep(3)
+movelinear(p1, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p2, 200)
+t.sleep(3)
+movelinear(p2, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p3, 200)
+t.sleep(3)
+movelinear(p3, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p4, 200)
+t.sleep(3)
+movelinear(p4, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p5, 200)
+t.sleep(3)
+movelinear(p5, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p6, 200)
+t.sleep(3)
+movelinear(p6, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p7, 200)
+t.sleep(3)
+movelinear(p7, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(p8, 200)
+t.sleep(3)
+movelinear(p8, 10)
 coordenadas_Cartesianas = oc.le_cart()
 print("=> X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r))
-t.sleep(5)
-movelinear(homepos, 200)
+t.sleep(3)
+movelinear(homepos, 10)
