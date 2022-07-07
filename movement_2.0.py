@@ -45,7 +45,7 @@ def movelinear(posfin, steps):
             reach_z = True    
 
         #Escreve o novo vetor posicao com os devidos incrementos em cada eixo:
-        oc.escreve_le_cart( pos.x , pos.y , pos.z , 0.0 , 90.0 , 0.0 )
+        oc.escreve_le_cart( pos.x , pos.y , pos.z , 0.0 , 87.6 , -2.0 )
 
         #Suaviza o movimento, reduzindo a velocidade em 10 vezes, nos ultimos 10mm:
         if(((abs(posfin.x-pos.x) < 10) or (abs(posfin.y-pos.y) < 10) or (abs(posfin.z-pos.z) < 10)) and smooth):
@@ -68,7 +68,7 @@ x1 = 998.528
 y1 = -198.214
 x2 = 986.234
 y2 = 209.599
-zmesa = 218.0
+zmesa = 206.0
 hcopo = 97.0
 
 #Definicoes:
