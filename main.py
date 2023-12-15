@@ -32,12 +32,12 @@ def movelinear(posfin, velocity):
 
 target = loc.cordCart()
 
-target.x = 797.0
-target.y = 10.0
-target.z = 1300
-target.a = 0.0
-target.e = 100.0
-target.r = 0.0
+target.x = 800.0
+target.y = -1000.0
+target.z = 1100.0
+target.a = -30.0
+target.e = 60.0
+target.r = 90.0
 
 
 
@@ -46,18 +46,12 @@ target.r = 0.0
 #t.sleep(2)
 print("Posição Inicial: ")
 coordenadas_Cartesianas = oc.le_cart()
-print("X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r) )
-print("")
-print("")
-print("")
+print(f"\n\n X: {coordenadas_Cartesianas.x} \t Y: {coordenadas_Cartesianas.y} \t Z: {coordenadas_Cartesianas.z} \t a: {coordenadas_Cartesianas.a} \t e: {coordenadas_Cartesianas.e} \t r: {coordenadas_Cartesianas.r}\n\n")
 
 movelinear(target, 50)
 
-
 t.sleep(2)
-coordenadas_Cartesianas = oc.le_cart()
-print("")
-print("")
-print("")
+
 print('FINAL:')
-print("X: " + str(coordenadas_Cartesianas.x) + "\tY: " +  str(coordenadas_Cartesianas.y) + "\tZ: " +  str(coordenadas_Cartesianas.z) + "\ta: " +  str(coordenadas_Cartesianas.a) + "\te: " +  str(coordenadas_Cartesianas.e) + "\tr: " +  str(coordenadas_Cartesianas.r) )
+coordenadas_Cartesianas = oc.le_cart()
+print(f"\n\n X: {coordenadas_Cartesianas.x} \t Y: {coordenadas_Cartesianas.y} \t Z: {coordenadas_Cartesianas.z} \t a: {coordenadas_Cartesianas.a} \t e: {coordenadas_Cartesianas.e} \t r: {coordenadas_Cartesianas.r}\n\n")
