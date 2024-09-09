@@ -44,14 +44,18 @@ target.r = 90.0
 
 #oc.escreve_le_cart( 345.465 , -609.542 , 823.960 , 0.0 , 180.0 , 0.0 )
 #t.sleep(2)
-print("Posição Inicial: ")
-coordenadas_Cartesianas = oc.le_cart()
-print(f"\n\n X: {coordenadas_Cartesianas.x} \t Y: {coordenadas_Cartesianas.y} \t Z: {coordenadas_Cartesianas.z} \t a: {coordenadas_Cartesianas.a} \t e: {coordenadas_Cartesianas.e} \t r: {coordenadas_Cartesianas.r}\n\n")
+# print("Posição Inicial: ")
+# coordenadas_Cartesianas = oc.le_cart()
+# print(f"\n\n X: {coordenadas_Cartesianas.x} \t Y: {coordenadas_Cartesianas.y} \t Z: {coordenadas_Cartesianas.z} \t a: {coordenadas_Cartesianas.a} \t e: {coordenadas_Cartesianas.e} \t r: {coordenadas_Cartesianas.r}\n\n")
 
-movelinear(target, 50)
+# movelinear(target, 50)
 
-t.sleep(2)
+# t.sleep(2)
 
 print('FINAL:')
 coordenadas_Cartesianas = oc.le_cart()
 print(f"\n\n X: {coordenadas_Cartesianas.x} \t Y: {coordenadas_Cartesianas.y} \t Z: {coordenadas_Cartesianas.z} \t a: {coordenadas_Cartesianas.a} \t e: {coordenadas_Cartesianas.e} \t r: {coordenadas_Cartesianas.r}\n\n")
+
+while(True):
+    print('\n\n.')
+    t.sleep(1)
